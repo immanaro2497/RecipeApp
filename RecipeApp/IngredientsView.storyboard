@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Ingredients View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="IngredientsViewId" id="Y6W-OH-hqX" customClass="IngredientsViewController" customModule="RecipeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bcs-pO-4KJ">
+                                <rect key="frame" x="0.0" y="59" width="393" height="116"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YMe-Vv-dQP">
+                                        <rect key="frame" x="12" y="12" width="327" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mxd-44-u6R">
+                                        <rect key="frame" x="12" y="70" width="327" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y4A-dM-51p">
+                                        <rect key="frame" x="351" y="43" width="30" height="30"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Add">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tappedAddIngredient" destination="Y6W-OH-hqX" eventType="touchUpInside" id="0kS-4T-5ge"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Mxd-44-u6R" secondAttribute="bottom" constant="12" id="0ms-je-zKq"/>
+                                    <constraint firstItem="YMe-Vv-dQP" firstAttribute="leading" secondItem="Bcs-pO-4KJ" secondAttribute="leading" constant="12" id="53y-fE-tor"/>
+                                    <constraint firstItem="Mxd-44-u6R" firstAttribute="leading" secondItem="Bcs-pO-4KJ" secondAttribute="leading" constant="12" id="Mkt-H1-4e2"/>
+                                    <constraint firstItem="y4A-dM-51p" firstAttribute="centerY" secondItem="Bcs-pO-4KJ" secondAttribute="centerY" id="Mxi-Vf-PDV"/>
+                                    <constraint firstItem="Mxd-44-u6R" firstAttribute="top" secondItem="YMe-Vv-dQP" secondAttribute="bottom" constant="24" id="SBc-JX-XMC"/>
+                                    <constraint firstItem="y4A-dM-51p" firstAttribute="leading" secondItem="Mxd-44-u6R" secondAttribute="trailing" constant="12" id="XOs-Ps-iay"/>
+                                    <constraint firstItem="YMe-Vv-dQP" firstAttribute="top" secondItem="Bcs-pO-4KJ" secondAttribute="top" constant="12" id="dd3-n2-64X"/>
+                                    <constraint firstItem="y4A-dM-51p" firstAttribute="leading" secondItem="YMe-Vv-dQP" secondAttribute="trailing" constant="12" id="fIm-3l-TIr"/>
+                                    <constraint firstAttribute="trailing" secondItem="y4A-dM-51p" secondAttribute="trailing" constant="12" id="rIm-CR-lUj"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="R2z-dS-gdK">
+                                <rect key="frame" x="0.0" y="195" width="393" height="623"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="R2z-dS-gdK" secondAttribute="bottom" id="Lk4-vS-pQz"/>
+                            <constraint firstItem="Bcs-pO-4KJ" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="SyP-zw-UIK"/>
+                            <constraint firstItem="R2z-dS-gdK" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Vsb-dN-dI0"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="R2z-dS-gdK" secondAttribute="trailing" id="eVY-qS-H5X"/>
+                            <constraint firstItem="Bcs-pO-4KJ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="hRZ-wG-ZQk"/>
+                            <constraint firstItem="Bcs-pO-4KJ" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="kmV-Jx-2Q1"/>
+                            <constraint firstItem="R2z-dS-gdK" firstAttribute="top" secondItem="Bcs-pO-4KJ" secondAttribute="bottom" constant="20" id="mng-OX-hHA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addButton" destination="y4A-dM-51p" id="nMA-Ar-y0o"/>
+                        <outlet property="amount" destination="Mxd-44-u6R" id="QH9-Je-W8X"/>
+                        <outlet property="name" destination="YMe-Vv-dQP" id="QYY-FM-e6b"/>
+                        <outlet property="tableView" destination="R2z-dS-gdK" id="q34-n6-ily"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139.69465648854961" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
